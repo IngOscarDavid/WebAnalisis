@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="justify-content: center; display: flex; margin: 20px; background-color: #ECDBF2;">
+    <div style="
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    background-color: white
+    ">
+        <h1>Trabajo Final de la Materia Analisis de Tecnicas Numericas en la Corporación Universitaria del Caribe CECAR
+        </h1>
+        <br>
+        <p> Presentado Por: 
+            <br> JESÚS ALBERTO DE LA ROSA TORIBIO
+            <br> JESÚS MARIO SERPA ARRIETA
+            <br> OSCAR DAVID VILLALBA MERCADO
+            <br> <br>
+            Buenas el día de hoy se presentará un algoritmo hecho en el lenguaje de programación Python el cual
+            resolverá los siguientes métodos:
+            <a href="https://es.wikipedia.org/wiki/M%C3%A9todo_de_Euler">Método de Euler,</a>
+            <a href="https://hmong.es/wiki/Heun%27s_method">Método de Heun,</a>
+            <a href="https://es.wikipedia.org/wiki/M%C3%A9todo_de_Runge-Kutta">Métodos de Runge - Kutta.</a>
+            Con las bases obtenidas en las clases de la materia ya ante mencionada.
+        </p>
+        <br>
+        <div style="display: flex;
+        justify-content: space-between">
+            <button type="button" class="btn btn-outline-success" id="B1" onclick="Euler()"> Calculadora <br> Del Método
+                de Euler</button>
+            <button type="button" class="btn btn-outline-success" id="B1" onclick="Heun()"> Calculadora <br> de Método
+                de Heun</button>
+            <button type="button" class="btn btn-outline-success" id="B1" onclick="Runge()">Calculadora <br> de Métodos
+                de Runge -Kutta.</button>
+        </div>
+        <hr>
+        <form id="F1" style="display: none" method="POST" action="/ME" >
+            <h1 style="display: flex; justify-content: center;"> Método de Euler </h1>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    X0 (X)
+                </label>
+                <input type="numeric" class="form-control" name="T01" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    Xf
+                </label>
+                <input type="numeric" class="form-control" name="T02" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    N
+                </label>
+                <input type="numeric" class="form-control" name="T03" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    H Valor de altura de paso
+                </label>
+                <input type="numeric" class="form-control" name="T04" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    Ecuacion (dy/dx)
+                </label>
+                <input type="text" class="form-control" name="T05" placeholder="x - y">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Calcular</button>
+        </form>
+        <form id="F2" style="display: none" method="POST" action="/MH">
+            <h1 style="display: flex; justify-content: center;"> Método de Heun</h1>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    X0 Valor Inicial de X
+                </label>
+                <input type="numeric" class="form-control" name="T06" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    Y0 Valor Inicial de Y
+                </label>
+                <input type="numeric" class="form-control" name="T07" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    XF
+                </label>
+                <input type="numeric" class="form-control" name="T08" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    H Valor de altura de paso
+                </label>
+                <input type="numeric" class="form-control" name="T09" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    Ecuacion
+                </label>
+                <input type="numeric" class="form-control" name="T10" placeholder="X - Y + 2">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Calcular</button>
+        </form>
+        <form id="F3" style="display: none" method="POST" action="/MR">
+            <h1 style="display: flex; justify-content: center;">Métodos de Runge -Kutta</h1>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    X0 Valor Inicial de X
+                </label>
+                <input type="numeric" class="form-control" name="T11" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    Y0 Valor Inicial de Y
+                </label>
+                <input type="numeric" class="form-control" name="T12" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    XF
+                </label>
+                <input type="numeric" class="form-control" name="T13" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    H Valor de altura de paso
+                </label>
+                <input type="numeric" class="form-control" name="T14" placeholder="0, 1, 2, ..., N">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                    Ecuacion
+                </label>
+                <input type="numeric" class="form-control" name="T15" placeholder="X - Y + 2">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Calcular</button>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+<script src="/static/JS/app.js"></script>
+</html>
