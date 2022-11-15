@@ -25,37 +25,95 @@
         <br>
         <div  id="R1">
             <div class="row">
-                <div class="col">
-                    <p>I</p>
+                <div class="col-6 col-sm-3">
+                    <p><b>X</b></p>
                     <hr>
                     {% for RL1 in RL1 %}
                         <p>{{RL1}}</p>
                     {% endfor %}
                 </div>
-                <div class="col">
-                    <p>Xi</p>
+                <div class="col-6 col-sm-3">
+                    <p><b>Y</b></p>
                     <hr>
                     {% for RL2 in RL2 %}
                         <p>{{RL2}}</p>
                     {% endfor %}
                 </div>
-                <div class="col">
-                    <p>Xi = X0 + h * I</p>
+                <div class="col-6 col-sm-3">
+                    <p><b>K1</b></p>
                     <hr>
                     {% for RL3 in RL3 %}
                         <p>{{RL3}}</p>
                     {% endfor %}
                 </div>
-                <div class="col">
-                    <p>Yi+1 = Yi + h(Xi-Yi)</p>
+                <div class="col-6 col-sm-3">
+                    <p><b>X + H/2</b></p>
                     <hr>
                     {% for RL4 in RL4 %}
                         <p>{{RL4}}</p>
                     {% endfor %}
                 </div>
+                <br>
+                <br>
+                <div class="col-6 col-sm-3">
+                    <p><b>Y + K1 * H/2</b></p>
+                    <hr>
+                    {% for RL5 in RL5 %}
+                        <p>{{RL5}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>K2</b></p>
+                    <hr>
+                    {% for RL6 in RL6 %}
+                        <p>{{RL6}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>X + H/2</b></p>
+                    <hr>
+                    {% for RL7 in RL7 %}
+                        <p>{{RL7}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>Y + K2 * H/2</b></p>
+                    <hr>
+                    {% for RL8 in RL8 %}
+                        <p>{{RL8}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>K3</b></p>
+                    <hr>
+                    {% for RL9 in RL9 %}
+                        <p>{{RL9}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>X + H</b></p>
+                    <hr>
+                    {% for RL10 in RL10 %}
+                        <p>{{RL10}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>Y + K3 * H</b></p>
+                    <hr>
+                    {% for RL11 in RL11 %}
+                        <p>{{RL11}}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p><b>K4</b></p>
+                    <hr>
+                    {% for RL12 in RL12 %}
+                        <p>{{RL12}}</p>
+                    {% endfor %}
+                </div>
             </div>
             <a href="/"><input type="button" class="btn btn-outline-success" value="Volver"></a>
-            <a href="/Grafica"><input type="button" class="btn btn-outline-success" value="Ver Grafica"></a>
+            <a href="/GraficaR"><input type="button" class="btn btn-outline-success" value="Ver Grafica"></a>
         </div>
     </div>
 </body>

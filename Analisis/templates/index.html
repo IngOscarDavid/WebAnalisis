@@ -23,7 +23,10 @@
         <h1>Trabajo Final de la Materia Analisis de Tecnicas Numericas en la Corporación Universitaria del Caribe CECAR
         </h1>
         <br>
-        <p> Presentado Por: <br> Jesus <br> Jesus De La Rosa <br> Oscar David Villalba Mercado
+        <p> Presentado Por: 
+            <br> JESÚS ALBERTO DE LA ROSA TORIBIO
+            <br> JESÚS MARIO SERPA ARRIETA
+            <br> OSCAR DAVID VILLALBA MERCADO
             <br> <br>
             Buenas el día de hoy se presentará un algoritmo hecho en el lenguaje de programación Python el cual
             resolverá los siguientes métodos:
@@ -111,40 +114,39 @@
             </div>
             <button type="submit" class="btn btn-outline-success">Calcular</button>
         </form>
-        
-        <form id="F3" style="display: none">
+        <form id="F3" style="display: none" method="POST" action="/MR">
             <h1 style="display: flex; justify-content: center;">Métodos de Runge -Kutta</h1>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     X0 Valor Inicial de X
                 </label>
-                <input type="numeric" class="form-control" id="T01" placeholder="0, 1, 2, ..., N">
+                <input type="numeric" class="form-control" name="T11" placeholder="0, 1, 2, ..., N">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     Y0 Valor Inicial de Y
                 </label>
-                <input type="numeric" class="form-control" id="T01" placeholder="0, 1, 2, ..., N">
+                <input type="numeric" class="form-control" name="T12" placeholder="0, 1, 2, ..., N">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     XF
                 </label>
-                <input type="numeric" class="form-control" id="T01" placeholder="">
+                <input type="numeric" class="form-control" name="T13" placeholder="">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     H Valor de altura de paso
                 </label>
-                <input type="numeric" class="form-control" id="T01" placeholder="0, 1, 2, ..., N">
+                <input type="numeric" class="form-control" name="T14" placeholder="0, 1, 2, ..., N">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     Ecuacion
                 </label>
-                <input type="numeric" class="form-control" id="T01" placeholder="X - Y + 2">
+                <input type="numeric" class="form-control" name="T15" placeholder="X - Y + 2">
             </div>
-            <button type="button" class="btn btn-outline-success" id="BE">Calcular</button>
+            <button type="submit" class="btn btn-outline-success">Calcular</button>
         </form>
     </div>
 </body>
